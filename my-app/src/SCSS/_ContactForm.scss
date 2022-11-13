@@ -1,0 +1,78 @@
+.ContactForm{
+    margin-bottom: 60px;
+    .container{
+         max-width: 1110px;
+        h2{
+            font-size: 18px;
+            font-weight: 700;
+            margin-bottom: 30px;
+        }
+
+        form{
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 40px;
+
+            input {
+                width: 100%;
+                padding: 18px 20px;
+                border: 1px solid $color-lightgray;
+            }
+            .textArea{
+                grid-column: 1/-1;
+
+                textarea{
+                
+                    width: 100%;
+                    height: 200px;
+                    resize: none;
+                    padding: 13px 15px;
+                    border: 1px solid $color-lightgray;
+
+                }
+            }
+            
+        }
+
+        .send{
+            background-color: $color-theme;
+            color: $color-white;
+            outline: none;
+            border: 0;
+            width: 100%;
+            height: 50px;
+            transition: 0.3s;
+
+            &:hover{
+                background-color: $color-dark;
+            }
+        }
+
+        .error{
+            color: $color-theme;
+            border: 1px solid $color-theme;
+        }
+
+        .errorMessage{
+            margin-top: 5px;
+            color: $color-theme;
+            font-size: 0.8em;
+        }
+    }
+    
+}
+
+
+
+@media only screen and (min-width:'720px'){
+    .ContactForm {
+        #cForm{
+            grid-template-columns: repeat(2,1fr) ;
+
+            .send {
+                width: 200px;
+              }
+        }  
+        
+    }   
+}

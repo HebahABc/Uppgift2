@@ -1,0 +1,180 @@
+.Grid3{
+    width: 200px;
+    height: 280px;
+    display: grid;
+    grid-template-rows: repeat(2,1fr);
+    margin-left: 30px;
+    margin-top: 35px;
+    margin-bottom: 320px;
+    row-gap: 25px;
+}
+
+#box1{
+    grid-row: 1/2;
+    background-color: $color-darkgray;
+    width: 400px;
+    height: 280px;
+}
+
+#txt2{
+    width: 300px;
+    height: 280px;
+    margin: auto;
+}
+#txt2 h1 {
+    color: $color-white;
+    letter-spacing: 1px;
+    font-size: 30px;
+    font-weight: 700;
+}
+#txt2 button{
+    background-color: $color-dark;
+    color: $color-white;
+    margin-top: 35px;
+    margin-left: 80px;
+}
+#txt-btn{
+    margin-top: 30px;
+}
+
+#box2{
+    grid-row: 2/3;
+    background-color: $color-lightgray;
+    width: 400px;
+    height: 280px;
+}
+#txt3{
+    width: 200px;
+    height: 280px;
+    margin: auto;
+}
+#txt3 h1 {
+    color: $color-dark;
+    letter-spacing: 1.5px;
+    font-size: 30px;
+    font-weight: 700;
+}
+#btn2{
+    background-color: $color-white;
+    color: $color-dark;
+    margin-top: 35px;
+    margin-left: 10px;
+    width:130px;
+    height: 40px;
+    border: none;
+    cursor: pointer;
+    outline: none;
+    position: relative;
+    transition: 0.3s;
+}
+
+#btn2::before{
+    content: "";
+    position: absolute;
+    height: 0;
+    width: 0;
+    bottom: 22px;
+    left: 5px;
+}
+#btn2::after{
+    content: "";
+    position: absolute;
+    height: 0;
+    width: 0;
+    top: 22px;
+    right: 5px;
+}
+#btn2:hover::before{
+    height: 10px;
+    width: 10px;
+    border: 2px solid #000;
+    border-right: none;
+    border-bottom: none;
+    transition: 0.5s;
+}
+#btn2:hover::after{
+    height: 10px;
+    width: 10px;
+    border: 2px solid #000;
+    border-left: none;
+    border-top: none;
+    transition: 0.5s;
+}
+#txt-btn .btn1:hover{
+    background-color: $color-theme;
+}
+#btn2:hover {
+    background-color: $color-theme;
+}
+
+#txt-btn2{
+    margin-left: 20px;
+    margin-top: 30px;
+}
+
+
+@media (min-width:1024px){
+    .Grid3{
+        grid-template-columns: repeat(2, 1fr);
+        width: 90%;
+        margin: auto;
+
+        #box1{
+            grid-column: 1/2;
+            grid-row: 1/2;
+            width: 550px;
+            height: 280px;
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+
+            #txt2{
+                width: 200px;
+                height: 280px;
+                margin-top: 25px;
+            }
+            #txt2 h1 {
+                color: #fff;
+                letter-spacing: 1px;
+                margin-left: -50px;
+                font-size: 30px;
+                font-weight: 700;
+            }
+        }
+        #box2{
+            grid-column: 2/3;
+            grid-row: 1/2;
+            width: 550px;
+            height: 280px;
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+
+            #txt3{
+                width: 175px;
+                height: 280px;
+                margin-top: 25px;
+            }
+            #txt3 h1 {
+                color: $color-dark;
+                letter-spacing: 1.5px;
+                font-size: 30px;
+                font-weight: 700;
+            }
+        }
+        #img3{
+            width: 275px;
+            height: 280px;
+            background-image: url(../Images/img-3.png);
+            background-size: cover;
+        }
+        #img4{
+            width: 300px;
+            height: 280px;
+            background-image: url(../Images/img-4.png);
+            background-size: cover;
+            float: right;
+        }
+    }
+
+}

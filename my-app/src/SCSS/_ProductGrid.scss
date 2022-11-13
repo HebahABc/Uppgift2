@@ -1,0 +1,199 @@
+.gridProduct{
+    width: 100%;
+    justify-content: center;
+    padding-left: 120px;
+    
+    
+    .container{
+        max-width: 1110px;
+        display: flex;
+        justify-content: center;
+        text-align: center;
+    }
+}
+    .grid-cells {
+        width: 200px;
+        
+    } 
+    .Card{
+        width: 200px;
+        height: 160px;
+        position: relative;
+        overflow: visible;
+
+        #imgCard{
+            width: 100%;
+            height: 160px;
+            object-fit: cover;
+        }
+        
+        
+    }
+    .card-menu {
+        display: flex;
+        flex-direction: column;
+        width: fit-content;
+        height:100px;
+        border-radius: 25px;
+        justify-content: center;
+        float: right;
+        position: absolute;
+        right: 10px;
+        top:10px;
+        z-index: 1;
+        padding: 10px 0;
+        div {
+            background-color: #fff;
+            border-radius: 50%;
+            margin: 5px 0;
+            text-align: center;
+            box-shadow: 0 0 6px 4px $color-shadow;
+            outline: none;
+            }
+        
+        i {
+            padding: 5px;
+            color: #000;
+           }    
+           
+           
+    }
+    
+    .background{
+        position: absolute;
+        bottom: 0;
+        background-color: $color-theme;
+        width: 100%;
+        height: 20%;
+        overflow: visible;
+
+        .card_body{
+            position: absolute;
+            bottom: 20%;
+            left: 0;
+            width: 100%;
+            z-index: 1;
+            text-decoration: none;
+            justify-content: center;
+            text-align: center;
+            color: $color-white;
+        }
+        .card_body::before{
+            content: "";
+            position: absolute;
+            border: 2px solid #fff;
+            border-right: none;
+            border-bottom: none;
+            height: 12px;
+            width: 12px;
+            left: 5px;
+            top: 5px;
+        }
+        .card_body::after{
+            content: "";
+            position: absolute;
+            border: 2px solid #fff;
+            border-left: none;
+            border-top: none;
+            height: 12px;
+            width: 12px;
+            top: 12px;
+            right: 6px;
+        }
+    }  
+
+#specification {
+    justify-content: center;
+    text-align: center;
+}
+#specification div{
+    padding-top: 6px;
+}
+#Category {
+    font-size: 12px;
+    color: $color-darkgray;
+}
+#name {
+    font-size: 14px;
+}
+#price{
+    font-size: 15px;
+}
+
+#stars span {
+    color: $color-theme;
+  }
+
+ 
+  
+
+@media (min-width:900px){
+    
+    .grid-cells{
+        .Card{
+            transition: 0.3s ease-in-out;
+            overflow: hidden;
+        }
+        .card-menu {
+            
+            top:100%;
+            z-index: 1;
+            transition: 0.3s;
+
+            i:hover{
+                color: #fff;
+                }
+            div:hover {
+                background-color: #000;
+            }
+        }
+        .background{
+            display:none;
+            transition: 0.3s ease-in-out;
+
+            .card_body{
+                
+                transition: 0.3s;
+                z-index: 1;
+            }
+           
+        }
+        
+    }
+    .Card:hover .background {
+        display: block;
+        opacity: 0.8;
+        
+    }
+    .Card:hover .card_body{
+        bottom: 20%;
+        color: $color-white;
+    }
+    .Card:hover{
+        background-color: $color-lightgray;
+    }
+    .background:hover {
+        background-color: #000;
+        
+    }
+    .Card:hover .card-menu{
+        top: 10px;
+    }
+}
+
+@media (min-width:1024px){
+    .gridProduct{
+        width: 80%;
+        justify-content: center;
+        margin-top: 25px;
+        margin-bottom: 25px;
+        margin-left: auto;
+        margin-right: auto;
+        padding-left: 0;
+        .container{
+            max-width: 1110px;
+            display: flex;
+            justify-content: center;
+        }
+}
+}

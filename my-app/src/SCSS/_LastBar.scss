@@ -1,0 +1,32 @@
+.last-bar{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: $linear-gradient-light;
+    padding: 25px;
+    margin-top: 25px;
+    border-top: 0.3px solid $color-darkgray;
+    
+    .Social-media{
+        margin-bottom: 15px;
+        
+        a{
+            font-size: 17px;
+            color: $color-dark;
+            text-decoration: none;
+            margin-left: 8px;
+            margin-right: 8px;
+    
+            &:hover{
+                color: $color-theme;
+            }
+        }
+    }
+     p{
+    font-size: 10px;
+    color: $color-dark;
+    
+    }
+}
+
